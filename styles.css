@@ -1,0 +1,70 @@
+body {
+    margin: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+}
+
+.avatar {
+    width: 150px;
+}
+
+@keyframes bckg {
+  0%   {background-color: #caf0f8;}
+  25%  {background-color: #90e0ef;}
+  50%  {background-color: #00b4b8;}
+  100% {background-color: #219ebc;}
+}
+.card {
+    width: 400px;
+    margin:0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background: #219ebc;
+    color: #023047;
+    border: 6px solid #ffb703;
+    border-radius:20px;
+    animation-name: bckg;
+    animation-duration:5s;
+}
+
+
+.highlight {
+   position:relative;
+   text-decoration: none;
+   padding:0 10px;
+    
+}
+
+.highlight::before,
+.highlight::after{
+    content:"";
+    position:absolute;
+    background-color: #8ecae6;
+    height:3px;
+    width:0%;
+    transition:0.2s;
+}
+
+.highlight::after{
+    left:11px;
+    bottom:-3px;
+}
+
+.highlight::before {
+    top:-2px;
+    right:8px;
+}
+
+.highlight:hover::before,
+.highlight:hover::after{
+    width:90%;
+}
+
+.highlight:hover{
+    color:#ffb703;
+}
+
+
+
